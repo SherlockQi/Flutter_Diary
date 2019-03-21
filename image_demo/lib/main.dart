@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() =>
-    runApp(MyApp(
-
-        items: new List<String>.generate(1000, (i) => "Item $i")
-    ));
+    runApp(MyApp());
 
 /* 图片
 class MyApp extends StatelessWidget {
@@ -85,6 +82,13 @@ class myTableView extends StatelessWidget {
 }
 */
 
+/* 动态列表
+
+void main() =>
+    runApp(MyApp(
+
+        items: new List<String>.generate(1000, (i) => "Item $i")
+    ));
 
 class MyApp extends StatelessWidget {
 
@@ -115,3 +119,50 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+*/
+
+/* 表格
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Text widget',
+      home: Scaffold(
+        appBar: new AppBar(
+          backgroundColor: Colors.red, title: new Text("ListView Demo"),
+        ),
+        body:GridView(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2, //每行数量
+            mainAxisSpacing: 4.0, //行间距
+            crossAxisSpacing: 2.0, //列间距
+            childAspectRatio: 1.0,//宽高比
+          ),
+          children: <Widget>[
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/174222.95651113_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/161509.75835860_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/175306.93440756_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/174222.95651113_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+            new Image.network('http://img5.mtime.cn/mg/2019/03/21/162008.66794827_285X160X4.jpg',fit: BoxFit.cover),
+
+          ],
+        )
+      ),
+    );
+  }
+}
+*/
